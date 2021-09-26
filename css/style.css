@@ -35,7 +35,81 @@ html, body {
 
 /* -------------------------------- HEADER BLOCK -------------------------------- */
 
-
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+.container {
+}
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 155px;
+    z-index: 2;
+}
+.header__burger {
+    display: none;
+}
+.header__burger_span {
+}
+.header__menu {
+    flex: 1 1 auto;
+}
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header__list_li {
+}
+.header__list_link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5a5a5a;
+    text-decoration: none;
+}
+.header__links {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header__link {
+    margin-right: 50px;
+}
+.header__link:last-child {
+    margin-right: 0;
+}
+.header__link_img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s ease 0s;
+    position: relative;
+    top: 0;
+}
+.header__link_img:hover {
+    top: -5px;
+}
+.header__link_img:first-child {
+    border-radius: 10px;
+}
 
 /* -------------------------------- END HEADER BLOCK -------------------------------- */
 /* -------------------------------- CONTENT BLOCK -------------------------------- */
