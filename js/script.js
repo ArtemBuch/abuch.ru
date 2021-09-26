@@ -1,6 +1,6 @@
 
 // Прокрутка до блоков
-$('a.header__link, a.smooth__link').on('click', function (event) {
+$('a.header__list_link, a.smooth__link').on('click', function (event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top - 88
