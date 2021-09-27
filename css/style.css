@@ -1,6 +1,7 @@
 html, body {
     height:100%;
     font-family: 'Roboto', sans-serif;
+    background-color: #fff;
 }
 .wrapper {
     display: flex;
@@ -52,14 +53,12 @@ html, body {
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 2;
 }
-.container {
-}
 .header__body {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 155px;
+    min-height: 100px;
     z-index: 2;
 }
 .header__burger {
@@ -75,8 +74,6 @@ html, body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-}
-.header__list_li {
 }
 .header__list_link {
     font-size: 18px;
@@ -111,12 +108,160 @@ html, body {
     border-radius: 10px;
 }
 
+@media (max-width:767px){
+    body.lock_bur {
+        overflow: hidden;
+    }
+    .header__body {
+        height: 50px;
+        justify-content: flex-end;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+        margin-right: 20px;
+    }
+    .header__burger_span {
+        position: absolute;
+        background-color: rgb(75, 75, 75);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before, .header__burger:after {
+        content: '';
+        background-color: rgb(75, 75, 75);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before {
+        top: 0;
+    }
+    .header__burger:after {
+        bottom: 0;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__menu {
+        position: fixed;
+        top: -150%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 100px 10px 20px 40px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__menu.active {
+        top: 0;
+    }
+    .header__list {
+        display: block;
+    }
+    .header__list_li {
+        margin-bottom: 20px;
+    }
+    .header__list_link {
+        font-size: 28px;
+    }
+    .header__links {
+        display: none;
+    }
+}
+
 /* -------------------------------- END HEADER BLOCK -------------------------------- */
 /* -------------------------------- CONTENT BLOCK -------------------------------- */
 
 .content {
     flex: 1 1 auto;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
 }
+.title {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    color: #000;
+}
+
+/* -------------------------------- HOME BLOCK -------------------------------- */
+.home__row {
+    height: 110vh;
+}
+.home__bg {
+    height: 100%;
+    background: fixed url(/../images/photo/3.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.home__body{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.home__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    position: fixed;
+    z-index: 2;
+}
+.home__title_h1 {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+.home__footer {
+    z-index: 4;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+/* -------------------------------- END HOME BLOCK -------------------------------- */
+
+
+
 
 /* -------------------------------- END CONTENT BLOCK -------------------------------- */
 /* -------------------------------- FOOTER BLOCK -------------------------------- */
