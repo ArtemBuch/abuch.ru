@@ -100,6 +100,9 @@ html, body {
     color: #ffffff;
     text-decoration: none;
 }
+.header__list_link:hover {
+    color: #000;
+}
 .header__links {
     flex: 1 1 auto;
     display: flex;
@@ -299,6 +302,7 @@ html, body {
 .about__body {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 50px;
 }
 .about__text {
     flex: 1 0 75%;
@@ -347,8 +351,7 @@ html, body {
         object-fit: contain;
     }
 }
-
-.about__header {
+.about__footer {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -385,7 +388,58 @@ html, body {
     text-align: justify;
     color: #6d3838;
 }
+/* -------------------------------- SKILLS BLOCK -------------------------------- */
 
+.skills {
+    background-color: #fff;
+}
+.skills__row {
+    display: flex;
+    flex-direction: column;
+}
+.skills__title {
+    color: #5a5a5a;
+}
+.skills__body {
+    padding-bottom: 50px;
+    display: flex;
+    gap: 30px 20px;
+    flex-wrap: wrap;
+}
+.skills__item {
+    flex: 1 1 calc((100% / 3) - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item__image {
+    align-self: center;
+    flex: 1 1 auto;
+    display: flex;
+    margin: 10px;
+}
+.item__image_img {
+    max-width: 89px;
+    transition: all 0.4s ease 0s;
+    position: relative;
+    top: 0;
+}
+.item__text_p {
+    color: #5a5a5a;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+}
+.skills__item:hover .item__text_p {
+    color: #000;
+}
+.skills__item:hover .item__image_img {
+    top: -5px;
+}
+
+/* -------------------------------- END SKILLS BLOCK -------------------------------- */
 /* -------------------------------- WORKS BLOCK -------------------------------- */
 
 .swiper-container {
