@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css?v1.1.5">
+    <link rel="stylesheet" href="/css/style.css?v1.1.6">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">
     <title>Артем Бочаров</title>
 </head>
@@ -78,14 +78,14 @@
                 </div>
                 <!---->
             </div>
-            <div class="skills" id="skills">
+            <div class="skills">
                 <div class="triangle4"></div>
                 <div class="skills__header">
                     <div class="triangle5"></div>
                     <div class="triangle6"></div>
                 </div>
                 <div class="container">
-                    <div class="skills__box">
+                    <div class="skills__box" id="skills">
                         <div class="skills__row">
                             <div class="skills__title title">Навыки</div>
                             <div class="skills__body">
@@ -150,8 +150,10 @@
                                     <div class="swiper-body">
                                         <div class="swiper-title">Сайт дизайнера</div>
                                         <div class="swiper-text">На&nbsp;сайте реализована отправка формы на&nbsp;почту.</div>
-                                        <div class="swiper-site"><a href="https://nat.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
-                                        <div class="swiper-habr"><a href="https://github.com/ArtemBuch/nat.abuch.ru" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        <div class="swiper-link">
+                                            <div class="swiper-site"><a href="https://nat.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
+                                            <div class="swiper-habr"><a href="https://github.com/ArtemBuch/nat.abuch.ru" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -159,8 +161,10 @@
                                     <div class="swiper-body">
                                         <div class="swiper-title">Первый сайт</div>
                                         <div class="swiper-text">Мой первый сайт</div>
-                                        <div class="swiper-site"><a href="https://prod.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
-                                        <div class="swiper-habr"><a href="https://github.com/ArtemBuch/piedpaper" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        <div class="swiper-link">
+                                            <div class="swiper-site"><a href="https://prod.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
+                                            <div class="swiper-habr"><a href="https://github.com/ArtemBuch/piedpaper" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -168,8 +172,10 @@
                                     <div class="swiper-body">
                                         <div class="swiper-title">Сайт front-end разработчика</div>
                                         <div class="swiper-text">На&nbsp;сайте реализован фулскрин экран. <br>Отправка формы на&nbsp;почту. <br>Плавный скрол до&nbsp;якоря.</div>
-                                        <div class="swiper-site"><a href="https://abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
-                                        <div class="swiper-habr"><a href="https://github.com/ArtemBuch/abuch.ru" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        <div class="swiper-link">
+                                            <div class="swiper-site"><a href="https://abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
+                                            <div class="swiper-habr"><a href="https://github.com/ArtemBuch/abuch.ru" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -177,8 +183,10 @@
                                     <div class="swiper-body">
                                         <div class="swiper-title">Тестовый сайт</div>
                                         <div class="swiper-text">На&nbsp;сайте реализован фулскрин экран.</div>
-                                        <div class="swiper-site"><a href="https://maria.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
-                                        <div class="swiper-habr"><a href="#" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        <div class="swiper-link">
+                                            <div class="swiper-site"><a href="https://maria.abuch.ru" target="_blank" class="swiper-site-a site">Сайт</a></div>
+                                            <div class="swiper-habr"><a href="#" target="_blank" class="swiper-habr-a site">GitHab</a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +204,23 @@
             <div class="container">
                 <div class="footer__row">
                     <div class="footer__body">
-                        <div class="footer__title title">Контакты</div>
+                        <div id="contacts" class="footer__title title">Контакты</div>
+                        <div class="footer__button">
+                            <a href="#popup" class="popup-link">Связаться со мной</a>
+                        </div>
+                        <div class="footer__sn">
+                            <div class="sn__images">
+                                <div class="sn__image">
+                                    <a href="https://t.me/Artem_BuCh" target="_blank" class="sn__image_a"><img src="/images/logo/telegram-bw.svg" alt="telegram" t class="sn__image_img"></a>
+                                </div>
+                                <div class="sn__image">
+                                    <a href="https://github.com/ArtemBuch" target="_blank" class="sn__image_a"><img src="/images/logo/github-bw.svg" alt="github" t class="sn__image_img"></a>
+                                </div>
+                            </div>
+                            <div class="sn__text">
+                                <p class="sn__text_p">Напиши мне сообщение в Teleram <br>или посмотри мой GitHab</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
