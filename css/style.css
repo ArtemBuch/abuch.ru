@@ -469,7 +469,7 @@ html, body {
 .swiper-container {
     position: relative;
     width: 100%;  
-    height: 500px;
+    min-height: fit-content;
     overflow: hidden;
 }
 .swiper-slide {
@@ -484,8 +484,7 @@ html, body {
     object-fit: contain;
 }
 .swiper-body{
-    padding-left: 115px;
-    padding-right: 35px;
+    padding: 10px 35px 50px 115px;
     width: 100%;
     height: 100%;
     display: flex;
